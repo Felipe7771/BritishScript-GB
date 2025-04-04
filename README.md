@@ -5,8 +5,13 @@ A **Comic** programming language about the British Empire, made in python
 
 ### Our dilemmas are:
 > Mastering programming is also part of the Empire;
+
 > 25% of the world was too little for us;
+
 > I hope Java also has room for tea;
+
 > If it compiles, it conquers.
+
 > Every exception shall be RAJ-ed.
+
 > Tea is not optional. It’s required().
