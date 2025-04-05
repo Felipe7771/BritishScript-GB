@@ -28,3 +28,27 @@
 | `slave`    | `let` / `var` / `const`             | Declares a variable |
 | `do`       | `=`                                 | Assign a value |
 
+
+
+#### 2. **'tea'**
+ A top-level empire cannot lack one essential thing. Wealth? Power? Decimating tribes? None of that... **TEA! lots of tea!** But how do we get lots of tea? Simple, as we already have slaves inserted, we'll make them work to produce each one, being a mass production! 
+
+ Just as we know _lists_, we know it as **'tea'**.
+
+##### Structure of the method:
+> **slave** var_name **do** **tea** **{** value1 , value2, value3, ... **}** 
+
+##### Examples:
+> **slave** slave_tea **do** **tea** **{** tea , tea, tea **}**
+
+> **slave** ages **do** **tea** **{** 15, 34, 10, 56, 78 **}**
+
+> **slave** colonies **do** **tea** **{** Africa, India, China, Australia, North America **}**
+
+##### Summary:
+| GB Keyword | Equivalent in Traditional Languages | Description |
+|------------|-------------------------------------|-------------|
+| `tea`      | `[]`                                | List declaration |
+| `{}`       | `[]`                                | List range |
+| `,`        | `,`                                 | Data separator |
+
