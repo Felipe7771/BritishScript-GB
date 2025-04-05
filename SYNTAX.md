@@ -1,10 +1,10 @@
 # BritishScript syntax (GB)
 
-## Dominate the tricks of coding the same way we dominated a quarter of the world
+#### Dominate the tricks of coding the same way we dominated a quarter of the world
 
 ### 🧾 `Types of variables`
 
-#### 1. **'slave'**
+## 1. **`'slave'`**
  No empire can sustain itself on its own; labor is always needed to operate materials, store resources, trade, etc. From this, the nomenclature of the person responsible for storing such resources was defined, **'slave'**, and this is the method for simple data storage:
  Texts;
  Numbers:
@@ -28,9 +28,8 @@
 | `slave`    | `let` / `var` / `const`             | Declares a variable |
 | `do`       | `=`                                 | Assign a value |
 
-
-
-#### 2. **'tea'**
+			
+## 2. **`'tea'`**
  A top-level empire cannot lack one essential thing. Wealth? Power? Decimating tribes? None of that... **TEA! lots of tea!** But how do we get lots of tea? Simple, as we already have slaves inserted, we'll make them work to produce each one, being a mass production! 
 
  Just as we know _lists_, we know it as **'tea'**.
