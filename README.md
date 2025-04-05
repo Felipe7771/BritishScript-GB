@@ -15,3 +15,5 @@
 > Every exception shall be RAJ-ed.
 
 > Tea is not optional. It’s required().
+
+For a full list of commands and syntax, see [GB Syntax Reference](SYNTAX.md)
