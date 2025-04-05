@@ -5,19 +5,21 @@
 ### 🧾 `Types of variables`
 
 #### 1. **'slave'**
-> No empire can sustain itself on its own; labor is always needed to operate materials, store resources, trade, etc. From this, the nomenclature of the person responsible for storing such resources was defined, **'slave'**, and this is the method for simple data storage:
-> Texts;
-> Numbers:
-> Boolean;
+ No empire can sustain itself on its own; labor is always needed to operate materials, store resources, trade, etc. From this, the nomenclature of the person responsible for storing such resources was defined, **'slave'**, and this is the method for simple data storage:
+ Texts;
+ Numbers:
+ Boolean.
 
->However, the empire also needs to order these slaves so that they store what we want correctly, using the **'do'** method, similar to '='.
+ However, the empire also needs to order these slaves so that they store what we want correctly, using the **'do'** method, similar to '='.
 
 ##### Structure of the method:
 > **slave** var_name **do** value
 
 ##### Examples:
 > **slave** name **do** "Elisabeth"
+
 > **slave** age **do** 98
+
 > **slave** alive **do** false
 
 ##### Summary:
