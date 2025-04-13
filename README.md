@@ -1,4 +1,4 @@
-# *BritishScript (GB)*
+# *BritishScript :gb: (GB)*
 *or the Great Britain code...* is A **Comic** programming language about the British Empire, made in python
 
 ## Please bear in mind **not to take the language seriously**, as it is deliberately developed to be comical by recounting events and figures that were used during the *great British Empire*, replacing known commands with such sayings.
