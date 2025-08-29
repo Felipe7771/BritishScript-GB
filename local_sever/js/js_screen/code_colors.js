@@ -1,4 +1,4 @@
-          function saveCaretPosition(context) {
+      function saveCaretPosition(context) {
         const sel = window.getSelection();
 
         if (sel.rangeCount > 0) {
@@ -44,48 +44,39 @@
       // Exemplo simples: deixa as palavras "alert" vermelhas
       const editor = document.getElementById("editor");
 
-      types_var = ["slave", "coin", "alias", "noble", "do", "for"];
+      types_var = {"slave": "rgb(220, 144, 255)",
+                   "coin":  "rgb(220, 144, 255)",
+                   "alias": "rgb(220, 144, 255)", 
+                   "noble": "rgb(220, 144, 255)",
+                   "do":    "rgb(220, 144, 255)", 
+                   "for":   "rgb(220, 144, 255)"};
 
       editor.addEventListener("input", () => {
-        const caretPos = saveCaretPosition(editor);
 
+        let caretPos = saveCaretPosition(editor);
 
-        let first_pieces = editor.innerText.split(" ");
-        console.log("fist_pieces: "+first_pieces)
-        let pieces = [];
+        let content = editor.innerText;
 
-        for (let i = 0; i < first_pieces.length; i++) {
-          if (first_pieces[i].includes(";")) {
-            
-            piece = first_pieces[i].replace(";"," ")
-            piece = piece.split(" ");
-            piece = piece.filter(Boolean);
+        console.clear()
+        console.log(content)
 
-            piece.splice(1,0,";");
+        for( let key in types_var){
+          const regex = new RegExp("^" + key.charAt(0).toUpperCase() + key.slice(1)+" ", "gm");
+          const regex_first = new RegExp("^" + key.charAt(0).toUpperCase() + key.slice(1), "gm");
+          const regex_last = new RegExp(" " + key + "$", "gm");
 
-            pieces = pieces.concat(piece);
-          } else {
-            pieces = pieces.concat(first_pieces[i])
-          }
+          content = content.replaceAll(` ${key} `,` <span style="color: ${types_var[key]}">${key}</span> `);
 
-          console.log(i+":"+pieces)
+          content = content.replaceAll(regex,`<span style="color: ${types_var[key]}">${key.charAt(0).toUpperCase() + key.slice(1)}</span> `);
+
+          content = content.replaceAll(` ${key};`,` <span style="color: ${types_var[key]}">${key}</span>;`);
+
+          content = content.replaceAll(regex_last,` <span style="color: ${types_var[key]}">${key}</span>`);
+
+          content = content.replaceAll(`${key.charAt(0).toUpperCase() + key.slice(1)};`,`<span style="color: ${types_var[key]}">${key.charAt(0).toUpperCase() + key.slice(1)}</span>;`);
+
         }
 
-        console.log(pieces);
-        editor.innerText = "";
-        editor.innerHTML = "";
-
-        let text = [];
-
-        for (let i = 0; i < pieces.length; i++) {
-          if (types_var.includes(pieces[i].toLowerCase().trim())) {
-            text[i] = `<span style="color: rgb(220, 144, 255);">${pieces[i]}</span>`;
-          } else {
-            text[i] = `<span>${pieces[i]}</span>`;
-          }
-        }
-
-        editor.innerHTML = text.join(" ").replaceAll("</span> <span>;",";");
-        console.log(text.join(" ").replaceAll("</span> <span>;",";"));
+        editor.innerHTML = content;
         restoreCaretPosition(editor, caretPos);
       });
