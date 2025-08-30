@@ -86,7 +86,7 @@ editor.addEventListener("input", () => {
 
     content = content.replaceAll(regex_last,` <span style="color: ${types_var[key]}">${key}</span>`);
 
-    content = content.replaceAll(`${key.charAt(0).toUpperCase() + key.slice(1)}.`,`<span style="color: ${types_var[key]}">${key.charAt(0).toUpperCase() + key.slice(1)}</span>,`);
+    content = content.replaceAll(`${key.charAt(0).toUpperCase() + key.slice(1)},`,`<span style="color: ${types_var[key]}">${key.charAt(0).toUpperCase() + key.slice(1)}</span>,`);
     content = content.replaceAll(`${key.charAt(0).toUpperCase() + key.slice(1)};`,`<span style="color: ${types_var[key]}">${key.charAt(0).toUpperCase() + key.slice(1)}</span>,`);
 
     content = content.replaceAll(`;`,`,`);

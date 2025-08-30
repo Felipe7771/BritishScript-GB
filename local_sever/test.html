@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,500;1,200&family=Lobster&display=swap" rel="stylesheet">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+
   </head>
 
   <style>
@@ -238,10 +240,26 @@
 
     .quantSlot{
       border-bottom: 5px solid #2289e6;
-      padding-bottom: -20px;
+      padding-bottom: 20px;
       margin-bottom: 1rem;
       margin-right: 10px;
       height: 2rem;
+      display: flex;
+      justify-content: space-between;
+      justify-items: center;
+    }
+
+    .quantSlot button{
+      padding: 10px;
+      margin-bottom: -10px;
+      font-weight: bold;
+      font-size: 1rem;
+      font-family: 'Horizon', sans-serif;
+      background-color: #2289e6;
+      color:rgb(23, 23, 30);
+      border: none;
+      cursor: pointer;
+
     }
 
     /* .scroll-wrapper h3{
@@ -267,7 +285,7 @@
 
     <section class="vagas">
       <div class="quantSlot">
-          <h3>YOUR CODE<button onclick="Execute()">Run</button></h3>
+          <h3>YOUR CODE</h3><button onclick="Execute()"><i class='bx  bxs-play'  ></i> Run</button>
       </div>
       <div class="scroll-wrapper"> 
               <div class="placeCode">
@@ -298,6 +316,6 @@
 
   <script src="js/js_screen/text_code_decoration.js"></script>
   <script src="js/js_screen/code_colors.js"></script>
-  <script src="js/js_gb/controller.js"></script>
+  <script type="module" src="js\js_gb\controller.js"></script>
   </body>
 </html>

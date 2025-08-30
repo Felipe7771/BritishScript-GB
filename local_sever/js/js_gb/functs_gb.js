@@ -1,5 +1,5 @@
-const data = require("./data_gb");
-import {Slave, Coin} from "./types_gb";
+const data = require("data_gb");
+import {Slave, Coin} from "types_gb";
 
 function new_var(name, type, data_type="int",value=null, noble=false, alias_var=""){
     switch(type){
@@ -51,3 +51,8 @@ module.exports = {
     new_var
 }
 
+window.new_var = new_var;
+window.obj = obj;
+window.new_slave = new_slave;
+window.new_coin = new_coin;
+window.new_coin = new_alias;

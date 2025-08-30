@@ -1,8 +1,8 @@
 // local de identificação das variadas criadas
 // NameVar: ObjetoVar
-let vars = {}
+export let vars = {}
 
-let functs = {
+export let functs = {
     'slave':'slave',
     'noble':'noble',
     'coin':'coin',
@@ -10,9 +10,4 @@ let functs = {
     'for':'for',
     'do':'do',
 } 
-
-module.exports = {
-    vars,
-    functs
-}
 
