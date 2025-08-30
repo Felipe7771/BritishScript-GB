@@ -9,7 +9,7 @@ let functs = {
     'alias':'alias',
     'for':'for',
     'do':'do',
-}
+} 
 
 module.exports = {
     vars,

@@ -43,4 +43,11 @@ function new_alias(name, alias_var){
         content: ""};
 }
 
+module.exports = {
+    new_alias,
+    new_coin,
+    new_slave,
+    obj,
+    new_var
+}
 
