@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,500;1,200&family=Lobster&display=swap" rel="stylesheet">
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
 
     <script type="module" src="./js/js_gb/Readcommand.js"></script>
     <script type="module" src="./js/js_gb/controller.js"></script>
@@ -21,254 +22,11 @@
   </head>
 
   <style>
-    body{
-        background-color: rgb(23, 23, 30);
-    }
 
     body::-webkit-scrollbar {
       display: none; /* Para navegadores baseados em WebKit (Chrome, Safari) */
     }
 
-    .placeCode{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        font-size: large;
-    }
-
-    #editor{
-      width: 100%;
-      height: 100%;
-      padding-left: 100px;
-        background-color: rgb(36, 36, 45);
-        color: white;
-        padding: 2rem 5px 5px 2rem; 
-        text-decoration: none;
-        -webkit-user-modify: read-write-plaintext-only; /* Safari/Chrome */
-              font-family: "IBM Plex Serif", serif;
-      font-weight: 500;
-      font-style: normal;
-    }
-
-    #editorConsole{
-      width: 100%;
-      height: 100%;
-        background-color: rgb(32, 32, 39);
-        color: white;
-        padding: 5px; 
-        text-decoration: none;
-                      font-family: "IBM Plex Serif", serif;
-      font-weight: 500;
-      font-style: normal;
-    }
-
-    #editor::-webkit-scrollbar {
-      display: none; /* Para navegadores baseados em WebKit (Chrome, Safari) */
-      
-    }
-    #editorConsole::-webkit-scrollbar {
-      display: none; /* Para navegadores baseados em WebKit (Chrome, Safari) */
-      
-    }
-
-    .test{
-        color: rgb(220, 144, 255);
-    }
-
-
-    .search-bar {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      /* padding: 0px 2rem; */
-      flex: 1;
-      /* max-width: 400px; */
-      /* background-color: #2289e6; */
-      justify-content: space-between;
-      color: white;
-      background-color: black;
-    }
-
-    .gb{
-      display: flex;
-      justify-items: center;
-      color: white;
-    }
-
-    .ibm-plex-serif-medium {
-      font-family: "IBM Plex Serif", serif;
-      font-weight: 500;
-      font-style: normal;
-    }
-
-    .gb img{
-      width: 10rem;
-      height: 10rem;
-    }
-
-    .gb h1{
-      font-family: "Lobster", sans-serif;
-      font-weight: 400;
-
-      font-size: 4rem;
-
-    }
-
-    #typewrite{
-      height: 2rem;
-      font-family: "IBM Plex Serif", serif;
-      font-weight: 200;
-      font-style: italic;
-      font-size: larger;
-      /* background-color: #2032a7; */
-      white-space: nowrap;
-      border-right: 2px solid rgba(255, 255, 255, 0.858);
-      color: rgba(255, 255, 255, 0.787);
-      animation: border 1s infinite ease-in-out;
-      padding: 0px 0px;
-    }
-
-    @keyframes border{
-      to{
-        border-right: 2px solid rgb(23, 23, 30);
-      }
-      from{
-        border-right: 2px solid rgba(255, 255, 255, 0.858);
-      }
-    }
-
-    .buttons {
-      display: flex;
-      gap: 10px;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-
-    .vagas {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .vagas h3 {
-      color: #2289e6;
-      margin-bottom: 20px;
-      font-weight: bold;
-      font-family: 'Horizon', sans-serif;
-      font-size: 1.3rem;
-    }
-
-    .scroll-wrapper {
-      overflow-y: auto;
-      height: 100%;
-      padding-right: 10px;
-    }
-
-    .vaga-card form{
-        all: unset;
-        cursor: pointer;
-        display: contents;
-
-    }
-
-    .vaga-card {
-      border: 2px solid #196e78;
-      padding: 20px;
-      margin-bottom: 20px;
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-      background-color: #f9f9f9;
-      height: 170px;
-      align-items: center;     /* Alinha verticalmente no centro */
-      transition: .15s;
-    }
-
-    .vaga-card:hover{
-      background-color: rgb(193, 250, 246);
-    }
-
-    .vaga-card:hover h4{
-      color: #196e78;
-      font-size: 1.72rem;
-    }
-
-    .vaga-card button{
-        all: unset;
-        cursor: pointer;
-        display: contents;
-        width: 100%;
-        height: 100%;
-
-    }
-
-    .vaga-card img {
-      width: 120px;
-      height: 120px;
-    }
-
-    .vaga-info h4 {
-      color: #e76f00;
-      font-size: 1.7rem;
-      margin-bottom: 5px;
-      font-family: 'Horizon', sans-serif;
-      transition: .2s;
-    }
-
-    .vaga-info h3 {
-      color: #e76f00;
-      font-size: 1.7rem;
-      margin-bottom: 5px;
-      font-family: 'Horizon', sans-serif;
-      transition: .2s;
-    }
-
-    .vaga-info span {
-      display: block;
-      margin-bottom: 5px;
-      align-items: center;
-      color: #196e78;
-      font-weight: bold;
-      font-family: 'Antique', sans-serif;
-    }
-
-    .vaga-info p {
-      font-size: 1em;
-      color: #444;
-    }
-
-    .quantSlot{
-      border-bottom: 5px solid #2289e6;
-      padding-bottom: 20px;
-      margin-bottom: 1rem;
-      margin-right: 10px;
-      height: 2rem;
-      display: flex;
-      justify-content: space-between;
-      justify-items: center;
-    }
-
-    .quantSlot button{
-      padding: 10px;
-      margin-bottom: -10px;
-      font-weight: bold;
-      font-size: 1rem;
-      font-family: 'Horizon', sans-serif;
-      background-color: #2289e6;
-      color:rgb(23, 23, 30);
-      border: none;
-      cursor: pointer;
-
-    }
-
-    /* .scroll-wrapper h3{
-      border-bottom: 5px;
-      color: blue;
-    } */
   </style>
 </head>
 
@@ -291,6 +49,23 @@
           <h3>YOUR CODE</h3><button id="btn"><i class='bx  bxs-play'  ></i> Run</button>
       </div>
       <div class="scroll-wrapper"> 
+              <div class="numberLines" id="contator">
+                <ul id="list">
+                <!-- <li>1</li>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+                <li>2</li>
+                <li>99</li>
+                <li>999</li>
+                <li style="font-size: medium;">9999</li>
+                <li style="font-size:small;">99999</li> -->
+                </ul>
+              </div>
               <div class="placeCode">
               <div
                 id="editor"
@@ -318,6 +93,6 @@
   </main>
 
   <script src="./js/js_screen/text_code_decoration.js"></script>
-  <script src="./js/js_screen/code_colors.js"></script>
+  <script src="./js/js_screen/code_colors.js" defer></script>
   </body>
 </html>

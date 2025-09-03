@@ -16,6 +16,34 @@ let var_piece = {"slave": "rgba(144, 212, 255, 1)",
               "noble": "rgba(144, 212, 255, 1)",
               "do":    "rgba(144, 212, 255, 1)"};
 
+function countLines(content){
+  console.log("Aqui")
+  let contator = document.getElementById("list");
+  contator.innerHTML = '';
+
+  let lines = content.split(/\r?\n/);
+  console.log(lines.length)
+  console.log(lines)
+
+  if(lines[lines.length - 1] === ""){
+    lines.pop();
+  }
+
+  for( let i = 1; i <= lines.length; i++){
+    if( i < 1000){
+      contator.innerHTML = contator.innerHTML + `<li>${i}</li>`;
+
+    } else if ( i < 10000){
+      contator.innerHTML = contator.innerHTML + `<li style="font-size: medium;">${i}</li>`;
+      
+    } else {
+      contator.innerHTML = contator.innerHTML + `<li style="font-size:small;">${i}</li>`;
+      
+    }
+  }
+
+}
+
 function saveCaretPosition(context) {
   const sel = window.getSelection();
 
@@ -69,7 +97,7 @@ editor.addEventListener("input", () => {
   console.clear()
   console.log(content)
 
-
+  countLines(content);
 
   for( let key in types_var){
     const regex = new RegExp("^" + key.charAt(0).toUpperCase() + key.slice(1)+" ", "gm");
