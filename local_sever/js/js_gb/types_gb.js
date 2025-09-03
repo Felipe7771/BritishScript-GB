@@ -63,10 +63,9 @@ export class Slave {
 }
 
 export class Coin {
-    constructor(name,value,type,noble){
+    constructor(name,value,noble){
         this.name = name;
         this.value = value;
-        this.type = type;
         this.noble = noble;
     }
 

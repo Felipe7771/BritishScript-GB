@@ -1,7 +1,7 @@
 // Exemplo simples: deixa as palavras "alert" vermelhas
 const editor = document.getElementById("editor");
 
-types_var = {"slave": "rgb(220, 144, 255)",
+let types_var = {"slave": "rgb(220, 144, 255)",
               "coin":  "rgb(220, 144, 255)",
               "alias": "rgb(220, 144, 255)", 
               "noble": "rgb(220, 144, 255)",
@@ -10,13 +10,11 @@ types_var = {"slave": "rgb(220, 144, 255)",
               "work":    "rgb(220, 144, 255)", 
               "for":   "rgb(220, 144, 255)"};
 
-var_piece = {"slave": "rgba(144, 212, 255, 1)",
+let var_piece = {"slave": "rgba(144, 212, 255, 1)",
               "coin":  "rgba(144, 212, 255, 1)",
               "alias": "rgba(144, 212, 255, 1)", 
               "noble": "rgba(144, 212, 255, 1)",
               "do":    "rgba(144, 212, 255, 1)"};
-
-
 
 function saveCaretPosition(context) {
   const sel = window.getSelection();

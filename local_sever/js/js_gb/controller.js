@@ -1,24 +1,31 @@
-import { functs, vars } from "./data_gb.js";
-import {Slave, Coin} from "./types_gb.js";
+import { vars } from "./data_gb.js";
+// import {Slave, Coin} from "./types_gb.js";
+import readCommands from "./Readcommand.js";
 
 //State:     (BOOLEAN) situação do código estiver certo ou errado
 //checked: (DICTONARY) retorno de resuldados de uma checagem
 let State = true
 let checked = {}
 
-export function Execute(){
+function Execute(){
 
     /*
     code :    (STRING) código bruto do usuário
     lines:    (ARRAY)  código de cada linha
     commands: (ARRAY)  comandos dentro da linha
     */
+
     const code = document.getElementById("editor").innerText;
-    const painel = document.getElementById("editorConsole");
+    let painel = document.getElementById("editorConsole");
     const lines = code.split(/\r?\n/);
 
     //limpar conteúdo anterior do console
     painel.innerHTML = "";
+
+    // esvariar variável criadas anteriormente
+    for (const key of Object.keys(vars)) {
+    delete vars[key]; // Remove cada propriedade
+    }
 
     // início do cronometro
     const time_up = performance.now();
@@ -30,8 +37,16 @@ export function Execute(){
         // primeira checagem de a estrurura de linha está correta
         checked = estruture_check(lines[line],line);
         if(!setState(checked.result)){break;}
+
+        // leitura dos comandos escritos
+        checked = readCommands(painel, lines[line], line);
+        if(!setState(checked.result)){break;}
         
     }
+
+    // for (let key in vars){
+    //     painel.innerText = painel.innerText + key + ":" + vars[key].value + " (" + vars[key].constructor.name + ")"
+    // }
 
     // fim do cronometro
     const time_down = performance.now();
@@ -102,4 +117,4 @@ function finishingCode(State,painel,total_time){
 // FUNÇÕES PRÁTICAS
 // ======================================================
 
-window.Execute = Execute;
+document.getElementById("btn").addEventListener("click", Execute);
