@@ -14,6 +14,8 @@ export function readCommands(painel, content, line){
     (content) => string; linha de texto escrito
     (line)    => int;    número da linha
     */
+    line_valided = false;
+    error_detected = false;
 
     // divisão da linha nos comandos (functs) escritos
     let commands = content.toLowerCase().split(" ");
