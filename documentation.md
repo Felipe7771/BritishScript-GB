@@ -17,3 +17,42 @@ Muitas linguagens de programação, PHP, Java, Python, JavaScript etc possuem al
 A priorização do desenvolvimento trata-se da indentação a cada protocolo, comando ou expressão, possuindo propósitos e funções diferentes, tenha novos modos de instanciação referenciadas a momentos históricos ocorridos, sendo eles uma relação explicitamente ou implicitamente, em principio de quanto mais elevado o nível de aprendizado a esse comando, mais se aproxima a eventos históricos específicos, como de variáveis simples à classes sociais para funções à periodo das Grandes Navegações com a colonização.
 
 A linguagem se concentra no público iniciante de programação, acresentado aqueles que curtem o estudo da história mundial, com nível básico de conhecimento de todas as épocas da história mundial para o entendimento completo e coerente da linguagem.
+
+### Introdução
+A HTRY nasceu da necessidade de introduzir conceitos históricos em estruturas programáveis, permitindo aos desenvolvedores simulem, organizem e representem eventos históricos dentro de um paradigma lógico e formal. 
+
+A filosofia da HTRY se apoia na crença de que a História é um sistema de eventos interconectados. Assim, cada recurso da linguagem é inspirado em estruturas narrativas e fatos históricos, refletindo não apenas aspectos técnicos, mas também culturais.
+
+__________________
+
+### Arquitetura
+
+
+| Fluxo de execução |
+|-------------------|
+| **Código-Fonte** → Leitura-de-estrutura → Interpretador → Checagem-pré-Execução → **Saída**|
+
+**Leitura-de-estrutura** → garante que o código escrito esteja com a formatação e padrão de código da linguagem estejam coerentes ao código
+
+**Interpretador** → responsável pela divisão dos tokens principais a cada linha
+
+**Checagem-pré-Execução** → reponsável pela avalização final da linha a qual linha esteja todos os valores necessários à execução
+
+**Biblioteca padrão** → funções básicas, estruturas de dados, utilitários.
+
+
+### Diagramas
+
+**[Código Fonte]**
+
+  ↓
+        
+[Leitura-de-estrutura] → 
+
+[Interpretador] → 
+
+[Checagem-pré-Execução]
+
+  ↓
+                                                    
+**[Saída]**
