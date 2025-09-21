@@ -19,9 +19,9 @@ A priorização do desenvolvimento trata-se da indentação a cada protocolo, co
 A linguagem se concentra no público iniciante de programação, acresentado aqueles que curtem o estudo da história mundial, com nível básico de conhecimento de todas as épocas da história mundial para o entendimento completo e coerente da linguagem.
 
 ### Introdução
-A HTRY nasceu da necessidade de introduzir conceitos históricos em estruturas programáveis, permitindo aos desenvolvedores simulem, organizem e representem eventos históricos dentro de um paradigma lógico e formal. 
+A HRA nasceu da necessidade de introduzir conceitos históricos em estruturas programáveis, permitindo aos desenvolvedores simulem, organizem e representem eventos históricos dentro de um paradigma lógico e formal. 
 
-A filosofia da HTRY se apoia na crença de que a História é um sistema de eventos interconectados. Assim, cada recurso da linguagem é inspirado em estruturas narrativas e fatos históricos, refletindo não apenas aspectos técnicos, mas também culturais.
+A filosofia da HRA se apoia na crença de que a História é um sistema de eventos interconectados. Assim, cada recurso da linguagem é inspirado em estruturas narrativas e fatos históricos, refletindo não apenas aspectos técnicos, mas também culturais.
 
 __________________
 
@@ -30,29 +30,32 @@ __________________
 
 | Fluxo de execução |
 |-------------------|
-| **Código-Fonte** → Leitura-de-estrutura → Interpretador → Checagem-pré-Execução → **Saída**|
+| **Código-Fonte** → Leitura-de-estrutura → Divisor → Interpretador → Checagem-pré-Execução → Execução → **Saída**|
 
-**Leitura-de-estrutura** → garante que o código escrito esteja com a formatação e padrão de código da linguagem estejam coerentes ao código
+* **Leitura-de-estrutura** → garante que o código escrito esteja com a formatação e padrão de código da linguagem estejam coerentes ao código
 
-**Interpretador** → responsável pela divisão dos tokens principais a cada linha
+* **Divisor** → quebrar o código escrito em linhas separadas
 
-**Checagem-pré-Execução** → reponsável pela avalização final da linha a qual linha esteja todos os valores necessários à execução
+* **Interpretador** → responsável pela divisão dos tokens principais a cada linha
 
-**Biblioteca padrão** → funções básicas, estruturas de dados, utilitários.
+* **Checagem-pré-Execução** → reponsável pela avalização final da linha a qual linha esteja todos os valores necessários à execução
+
+* **Execução** → processo real da função escrita pelo comando da linha, recebendo os valores válidos anteriormente para a execução
+
+* **Biblioteca padrão** → funções básicas, estruturas de dados, utilitários.
 
 
-### Diagramas
+### Diagrama
 
-**[Código Fonte]**
+```mermaid
+sequenceDiagram
+Código-Fonte ->> Leitura-de-estrutura: Envio de texto
+Leitura-de-estrutura ->> Divisor: Envio do conteúdo SE aprovado
+Divisor ->> Interpretador: Recebimento de uma linha
+Interpretador ->> Checagem-pré-Execução: linha de código válido
+Checagem-pré-Execução ->> Execução: comando com valores válidos
+Execução -> Saída: Execução do comando
+Execução ->> Divisor: ler próxima linha
 
-  ↓
-        
-[Leitura-de-estrutura] → 
+```
 
-[Interpretador] → 
-
-[Checagem-pré-Execução]
-
-  ↓
-                                                    
-**[Saída]**
