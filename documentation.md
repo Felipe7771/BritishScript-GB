@@ -59,3 +59,48 @@ Execução ->> Divisor: ler próxima linha
 
 ```
 
+__________________
+
+### Especificação da Linguagem
+
+1. **Estrutura Básica**
+Um programa em **HRA**, assim como a maioria das outras linguagens, é composta por **declarações e instruções**.
+
+Cada instrução deve estar válida a estrutura única do HRA, o **Register Sensitive**, trata-se da necessidade de que:
+* Todo início de comando precisa estar **Maiúsculo** *(mesmo que ao instanciar uma variavel anteriormente esteja em minúsculo)*;
+* Todo fim de comando deve ser fechado com `,`;
+
+Comentários são feitos conforme o padrão do **JavaScript**, `//` para comentar uma linha ou `/* ... */` para comentar múltiplas linhas.
+
+* Exemplo
+> // Primeiro programa em HRA
+> 
+> Work "Hello World!",
+
+2. **Sintaxe**
+Palavras-chave/comandos consistem em **case-sensitive**, tal que não podem ser usadas como nomes de variáveis.
+
+Comandos dentro de comentários não afetam a execução.
+
+* **Palavras-chave reservadas:**
+
+`burgher, noble, serf, revolt, event, alias, do, work, trade, deal, but, raid, war, pirate, history, colony, ... `
+
+3. **Tipos de Dados**
+
+* **(Número)** `Burgher` → *10, -5, 0.3 ...*;
+* **(String)** `Serf` → *"Roma", "Guerra dos 100 anos" ...*;
+* **(Booleano)** `Revolt` → *true, false*;
+* **(Data)** `Event` → *'1066-03-26','1918-11-11' ...*;
+* **(Constante)** `Noble` → *Valores compatível a qualquer tipo de variável anterior*;
+
+* Exemplo
+> Self acontecimento do "Fim da Primeira Guerra Mundial",
+> 
+> Burgher ano do 1918,
+> 
+> Revolt FimDaGuerra do true,
+> 
+> Event data do '1918-11-11',
+> 
+> Noble imperador do "Otto von Bismark",
