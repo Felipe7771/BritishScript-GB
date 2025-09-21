@@ -77,6 +77,9 @@ Comentários são feitos conforme o padrão do **JavaScript**, `//` para comenta
 > 
 > Work "Hello World!",
 
+<br>
+<br>
+
 2. **Sintaxe**
 Palavras-chave/comandos consistem em **case-sensitive**, tal que não podem ser usadas como nomes de variáveis.
 
@@ -86,13 +89,16 @@ Comandos dentro de comentários não afetam a execução.
 
 `burgher, noble, serf, revolt, event, alias, do, work, trade, deal, but, raid, war, pirate, history, colony, ... `
 
+<br>
+<br>
+
 3. **Tipos de Dados**
+Os tipos de dados principais da linguagem, string, número, booleano e data (novidade ao HRA) estão interligados a declaração de variável, aonde cada tipo de valor é aceito a partir do nome de instanciamento de variável específico.
 
 * **(Número)** `Burgher` → *10, -5, 0.3 ...*;
 * **(String)** `Serf` → *"Roma", "Guerra dos 100 anos" ...*;
 * **(Booleano)** `Revolt` → *true, false*;
 * **(Data)** `Event` → *'1066-03-26','1918-11-11' ...*;
-* **(Constante)** `Noble` → *Valores compatível a qualquer tipo de variável anterior*;
 
 * Exemplo
 > Self acontecimento do "Fim da Primeira Guerra Mundial",
@@ -102,5 +108,37 @@ Comandos dentro de comentários não afetam a execução.
 > Revolt FimDaGuerra do true,
 > 
 > Event data do '1918-11-11',
-> 
+
+<br>
+<br>
+
+4. **Variáveis Diversas**
+Além dos tipos de variáveis mostrados anteriormente, o HRA possui outros tipos de intanciamento de variáveis que não se dedicam a um tipo de dado espefícifo, sendo eles mais diversos
+
+* **(Constante)** `Noble` → *[Dados Imutáveis]*;
+* **(Compartilhamento de Dados)** `Alias` → *[Variável que compartilha valores de outra variável simultaneamente]*;
+
+* Exemplo
 > Noble imperador do "Otto von Bismark",
+> 
+> Imperador do "Oi", _<- (Erro de código!)_
+>
+> Burgher b do 5,
+> 
+> Alias a for b,
+> 
+> Work a, _(Console: 5)_
+>
+> B do 6,
+>
+> Work a, _(Console: 6)_
+
+<br>
+<br>
+
+5. **Operadores**
+* **Aritméticos**: `+` `-` `*` `/` `%` `**`
+
+* **Relacionais**: `==` `!=` `<` `>` `<=` `>=`
+
+* **Lógicos**: `and` `or` `not`
