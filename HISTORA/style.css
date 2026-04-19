@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000000;
+    height: 100vh;
+}
+
+.img_gb {
+    width: 150px;
+    height: 150px;
+}
+
+.header h1 {
+    font-family: 'Lobster', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 4rem;
+}
+
+/* Layout geral */
+.container {
+    display: flex;
+    height: 100vh;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Painéis */
+.panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    background: #000000;
+}
+
+/* Cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid black;
+    height: 120px;
+    background: #111120;
+    font-weight: bold;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Conteúdo com scroll independente */
+.content {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #141c24;
+    border-radius: 0px 0px 10px 10px;
+}
+
+/* Área de texto */
+textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    font-size: 25px;
+    padding: 10px;
+}
+
+/* Botões */
+.btn {
+    padding: 5px 5px;
+    margin-left: 5px;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.small {
+    width: 105px;
+    height: 50px;
+}
+
+.histora {
+    background-color: transparent;
+    border-width: 1px;
+    border-color: #ffffff;
+    color: red;
+}
+
+.docs {
+    width: 150px;
+}
+
+.histora:hover{
+    color: #ffffff;
+    border-color: red;
+    border-width: 1px;
+    background-color: red;
+    transition: .2s;
+}
+
+/* TERMINAL 💻 */
+.terminal-panel {
+    background: #111;
+    color: #0f0;
+}
+
+.terminal-panel .header {
+    background: #222;
+    color: #0f0;
+}
+
+.terminal {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    background: #000;
+    color: #0f0;
+}
+
+/* Simulação de texto de terminal */
+#terminal-output {
+    white-space: pre-wrap;
+}
+
+.terminal_red {
+    color: red
+}
+/* Editor com linhas */
+.editor {
+    display: flex;
+    height: 100%;
+    /* border: 1px solid #999; */
+    align-items: flex-start;
+    /* 🔥 faz crescer pra baixo */
+}
+/* Números das linhas */
+.line-numbers {
+    background: #2f3d7444;
+    padding: 10px 10px;
+    text-align: right;
+    color: rgb(150, 150, 150);
+    user-select: none;
+    font-family: monospace;
+    font-size: 20px;
+    border-right: 1px solid #00bbff;
+
+    line-height: 1.6; /* 🔥 PADRÃO */
+    width: 50px;
+}
+
+.content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #bd1e1e;
+}
+
+/* Cada número */
+.line-numbers div {
+    line-height: 1.6; /* 🔥 IGUAL */
+    height: auto; /* 🔥 REMOVE o 18px */
+}
+
+/* Área de código */
+#codeInput {
+    background-color: #141c24;
+    color: rgb(241, 253, 255);
+    min-width: 400px;
+    width: 100%;
+    min-height: 100%;
+
+    border: none;
+    outline: none;
+    resize: none;
+
+    padding: 10px;
+
+    font-family: monospace;
+    font-size: 20px;
+
+    line-height: 1.6; /* 🔥 IGUAL */
+    overflow: hidden;
+}
+
+.editor {
+    position: relative;
+    font-family: monospace;
+}
+
+#highlight,
+#codeInput {
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    padding-left: 60px;
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#highlight {
+    pointer-events: none;
+    color: white;
+}
+
+#codeInput {
+    background: transparent;
+    color: transparent;
+    caret-color: white;
+    resize: none;
+}

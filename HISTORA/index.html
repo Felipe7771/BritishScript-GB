@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <title>Meu Sistema</title> -->
+        <link rel="stylesheet" href="style.css" />
+        <title>GB - BritishScript</title>
+        <link rel="icon" href="img/gb_logo.png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,500;1,200&family=Lobster&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- LADO ESQUERDO -->
+            <div class="panel">
+<div class="header">
+    <div class="header-left">
+        <img src="img/gb.png" class="img_gb">
+        <h1>Histora</h1>
+    </div>
+
+    <div class="header-right">
+        <button class="btn small histora" onclick="run_histora()">
+            <span class="material-symbols-outlined">play_arrow</span>
+            Executar
+        </button>
+
+        <button class="btn small histora">
+            <span class="material-symbols-outlined">file_save</span>
+            Salvar
+        </button>
+
+        <button class="btn small histora docs"
+            onclick="window.open('https://github.com/Felipe7771/BritishScript-GB', '_blank')">
+            <span class="material-symbols-outlined">docs</span>
+            Documentação
+        </button>
+    </div>
+</div>
+
+                <div class="content">
+                    <div class="editor">
+                        <div class="line-numbers" id="lineNumbers"></div>
+                        <pre id="highlight"></pre>
+                        <textarea
+                            id="codeInput"
+                            spellcheck="false"
+                            autocomplete="off"
+                            autocorrect="off"
+                            autocapitalize="off"
+                            placeholder="Get the boat ready. Go ahead. Enter the code..."
+                        ></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LADO DIREITO -->
+            <div class="panel terminal-panel">
+                <div class="header">
+                    <span>Terminal</span>
+                    <div>
+                        <button class="btn">▶</button>
+                        <button class="btn small" onclick="emptyTerminal()">🧹</button>
+                    </div>
+                </div>
+
+                <div class="content terminal">
+                    <div id="terminal-output">C:\\Planet\\Countrys\\Wars\\historical_archive\\machine_guns> <br>Welcome to Histora, User! ... <br></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/colors/color_tags.js"></script>
+        <script src="js/colors/layout.js"></script>
+        <script src="js/colors/set_input.js"></script>
+        <script src="js/code/errors.js"></script>
+        <script src="js/code/extra_functions.js"></script>
+        <script src="js/code/estruture_check.js"></script>
+        <script src="js/code/histora_executer.js"></script>
+    </body>
+</html>

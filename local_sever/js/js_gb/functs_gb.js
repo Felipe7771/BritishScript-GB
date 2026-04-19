@@ -111,7 +111,7 @@ function ValidQuote(value, line){
 
 }
 
-function Count(value, item){
+export function Count(value, item){
     let quant = 0
     for(let i = 0; i < value.length; i++){
         if (value[i] == item){
@@ -120,4 +120,20 @@ function Count(value, item){
     }
 
     return quant
+}
+
+export function IndicesItem(value, item){
+    let list_indices = []
+    while (true){
+
+        let width = list_indices.length - 1
+        width+1 == 0? list_indices.push(value.indexOf(item)): list_indices.push(value.indexOf(item,list_indices[width]+1))
+
+        if (list_indices[width+1] == -1){
+            list_indices.pop()
+            break
+        }
+
+    }
+    return list_indices
 }
